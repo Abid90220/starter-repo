@@ -7,7 +7,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def read_csv_data(file_path: Path, x_col: str, y_col: str) -> tuple[list[float], list[float]]:
+def read_csv_data(
+    file_path: Path, x_col: str, y_col: str
+) -> tuple[list[float], list[float]]:
     """Read data from a CSV file and return specified columns.
 
     Args:
@@ -58,7 +60,11 @@ def main() -> None:
         help="Output file path (default: plot.png)",
     )
     parser.add_argument(
-        "--title", "-t", type=str, default="Data Plot", help="Plot title (default: Data Plot)"
+        "--title",
+        "-t",
+        type=str,
+        default="Data Plot",
+        help="Plot title (default: Data Plot)",
     )
 
     args = parser.parse_args()
